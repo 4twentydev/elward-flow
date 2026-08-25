@@ -39,6 +39,9 @@ export function Header() {
           <Link href="/shopfloor" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Shopfloor
           </Link>
+          <Link href="/inventory" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Inventory
+          </Link>
           <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Files
           </Link>
