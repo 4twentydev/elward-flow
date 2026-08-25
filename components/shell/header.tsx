@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { MobileNav } from "@/components/shell/mobile-nav";
 
 import { OrgSwitcher } from "@/components/shell/org-switcher";
+import { NotificationsDrawer } from "@/components/shell/notifications-drawer";
 import { Settings } from "lucide-react";
 
 export function Header() {
@@ -29,6 +30,12 @@ export function Header() {
           <Link href="/audit" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Workflow Audit
           </Link>
+          <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Files
+          </Link>
+          <Link href="/activity" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Activity
+          </Link>
           <Link href="/dashboard" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Platform
           </Link>
@@ -42,6 +49,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <OrgSwitcher />
+          <NotificationsDrawer />
           <Link
             href="/settings/organization"
             aria-label="Organization Settings"

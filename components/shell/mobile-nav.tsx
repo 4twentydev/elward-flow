@@ -30,6 +30,20 @@ export function MobileNav() {
               Workflow Audit
             </Link>
             <Link
+              href="/files"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Files
+            </Link>
+            <Link
+              href="/activity"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Activity
+            </Link>
+            <Link
               href="/dashboard"
               onClick={() => setOpen(false)}
               className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
@@ -56,6 +70,13 @@ export function MobileNav() {
               className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
             >
               Organization Settings
+            </Link>
+            <Link
+              href="/settings/roles"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Role Capabilities
             </Link>
           </nav>
         </div>
