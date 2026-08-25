@@ -1,39 +1,40 @@
-# 4TWENTY Operations
+# RivetWorks Operations
 
-4TWENTY Operations is the commercial operational-software platform behind configurable customer implementations and safe interactive demos. It is intentionally separate from [4TWENTY.DEV](https://www.4twenty.dev), the public marketing and portfolio site.
+The unified industrial operations platform built by RivetWorks for custom manufacturing, fabrication, and field service workflows.
 
-## Product principle
+## Core Capabilities Implemented (Prompts 00 - 26)
 
-Build the software an operation actually needs and leave out what it does not. Each role should see the smallest useful interface for completing its work.
+- **Phase 00: Foundation & Workflow Audit Engine**
+  - Architecture Decision Records (`docs/adr/ADR-0001` through `ADR-0004`)
+  - Authoritative Design System & Dark/Light Tokens (`docs/VISUAL_SYSTEM.md`)
+  - Real-Time Diagnostic Scoring Engine & Printable Executive Audit (`/audit`)
+- **Phase 10: Core Platform**
+  - Organizations, Tenancy Boundaries, & Active Org Switcher (`/settings/organization`)
+  - Least-Privilege Capability-Based RBAC Matrix (`/settings/roles`)
+  - Private Files, Expiring Signed URLs, Operational Activity Trail, & Outbox (`/files`, `/activity`)
+  - Master Data for Customers, Vendors, and Locations (`/directory`)
+  - Canonical Jobs Aggregate & Workflow State Engine (`/jobs`)
+  - Versioned Tenant Configuration & Dynamic Module Registry (`/settings/configuration`, `/modules`)
+- **Phase 20: Operations Modules**
+  - Mobile Shopfloor Terminal & Digital Traveler QR Routing (`/shopfloor`)
+  - Barcode-First Inventory Ledger & Overdraft Policy Guardrails (`/inventory`)
+  - Job Packet Intelligence & Critical Revision Inconsistency Alerts (`/job-packets`)
+  - Quality Assurance, FAI Inspection Checklists, & NCR Containment (`/quality`)
+  - Machine Registers, Downtime Intervals, PM Schedules, & Return-To-Service (`/maintenance`)
+  - Packaging Units, Gross Weight Limits, & Palletization Manifests (`/packaging`)
+  - Shipping Load Builder, Sequenced Route Stops, Digital BOL, & Proof of Delivery (`/shipping`)
 
-## Repository status
+## Toolchain & Verification
 
-This repository begins as a documentation-first scaffold. There is no speculative application code or dependency manifest yet. Prompt `00-foundation/02-platform-foundation.md` selects and records the implementation baseline before dependencies are installed.
+- **Runtime & Package Manager**: `bun` (v1.3.14)
+- **Framework**: `Next.js 16.3.2` with Turbopack & React 19
+- **Typecheck**: `bun run typecheck`
+- **Lint**: `bun run lint`
+- **Unit & Integration Tests**: `bun test` (15 test suites, 45 tests)
+- **Database Migrations**: `bun run db:migrate:check`
+- **Production Build**: `bun run build`
 
-## Structure
+## Architecture & Visual System
 
-- `app/`: application routes and composition
-- `modules/`: bounded business modules in a modular monolith
-- `components/`: shared presentation primitives only
-- `db/`: schema, migrations, seeds, and database utilities
-- `demo/`: isolated scenarios, fixtures, reset policies, and safety controls
-- `lib/`: cross-cutting technical utilities
-- `scripts/`: repeatable development and operational scripts
-- `tests/`: cross-module, integration, accessibility, and end-to-end tests
-- `docs/`: durable architecture and operating decisions
-- `prompts/`: ordered Gemini execution plan
-
-## Start here
-
-1. Read [`AGENTS.md`](AGENTS.md).
-2. Read [`docs/VISUAL_SYSTEM.md`](docs/VISUAL_SYSTEM.md).
-3. Read [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
-4. Read [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md).
-5. Read [`prompts/PROMPTS_README.md`](prompts/PROMPTS_README.md).
-6. Run prompts one at a time and stop at every checkpoint.
-7. Require a clean working tree and recorded verification before advancing.
-
-## Repository relationship
-
-`4twenty.dev` owns public positioning, lead capture, and portfolio entry pages. `4twenty-ops` owns authenticated operations, demo organizations, customer configurations, and business modules. They may share documented brand conventions and stable links, but never a database, authentication boundary, deployment environment, or copied implementation by default.
-
+- See `docs/ARCHITECTURE.md` for tenant isolation, domain aggregate boundaries, and service design rules.
+- See `docs/VISUAL_SYSTEM.md` for authoritative design tokens and UI components.

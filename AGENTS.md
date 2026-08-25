@@ -36,7 +36,7 @@ Stop feature work and write an ADR when a request conflicts with architecture, t
 
 ## Visual rule
 
-All visual work is subordinate to `docs/VISUAL_SYSTEM.md`. The existing 4TWENTY.DEV appearance is authoritative. Extend it; do not reinterpret, modernize, or overwrite it. Report whether any global visual identity changed. The expected answer is: “No existing global visual identity was changed.”
+All visual work is subordinate to `docs/VISUAL_SYSTEM.md`. The existing `rivetworks/website` appearance is authoritative during the brand and hosting migration. Extend it; do not reinterpret, modernize, or overwrite it. Report whether any global visual identity changed. The expected answer is: “No existing global visual identity was changed.”
 
 ## Data and security
 
@@ -49,4 +49,3 @@ New behavior requires proportionate automated tests. Critical workflows require 
 ## Git discipline
 
 Keep commits small and descriptive. Do not rewrite shared history, discard unrelated changes, or combine multiple prompts in one unreviewable commit. Every phase checkpoint must leave the repository buildable and documented.
-

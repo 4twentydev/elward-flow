@@ -4,5 +4,4 @@ Follow `AGENTS.md` as the standing engineering contract. Then read `docs/VISUAL_
 
 Execute only one numbered prompt at a time. Begin every session with repository inspection and a concise state/assumptions summary. End with verification evidence, documentation updates, unresolved risks, and the next prompt number. Do not advance past a checkpoint without explicit user approval.
 
-Never modify the separate `4twenty.dev` repository unless the active prompt explicitly scopes a public-site change there. When inspection is allowed, treat it as read-only reference material.
-
+Never modify the separate `rivetworks/website` repository unless the active prompt explicitly scopes a public-site change there. When inspection is allowed, treat it as read-only reference material.
