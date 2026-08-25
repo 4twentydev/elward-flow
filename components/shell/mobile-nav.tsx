@@ -92,6 +92,13 @@ export function MobileNav() {
             >
               Role Capabilities
             </Link>
+            <Link
+              href="/settings/configuration"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Module Entitlements
+            </Link>
           </nav>
         </div>
       )}

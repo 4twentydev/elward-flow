@@ -81,7 +81,13 @@ export function OrganizationWorkspace() {
           <Button asChild variant="outline" size="sm">
             <a href="/settings/roles">
               <ShieldCheck className="mr-2 size-3.5 text-primary" />
-              Role Capability Policies
+              Role Policies
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="sm">
+            <a href="/settings/configuration">
+              <ShieldCheck className="mr-2 size-3.5 text-primary" />
+              Module Entitlements
             </a>
           </Button>
         </div>
