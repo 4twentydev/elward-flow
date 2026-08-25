@@ -33,6 +33,9 @@ export function Header() {
           <Link href="/directory" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Directory
           </Link>
+          <Link href="/jobs" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Jobs
+          </Link>
           <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Files
           </Link>
