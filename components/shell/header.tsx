@@ -30,6 +30,9 @@ export function Header() {
           <Link href="/audit" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Workflow Audit
           </Link>
+          <Link href="/directory" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Directory
+          </Link>
           <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Files
           </Link>
