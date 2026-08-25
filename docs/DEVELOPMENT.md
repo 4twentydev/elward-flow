@@ -1,14 +1,29 @@
 # Development
 
-## Current bootstrap state
+## Established Platform Stack
 
-No package manager, framework, or dependencies are installed in this scaffold. The Platform Foundation prompt must inspect the current ecosystem, propose the minimum supported stack, record it in an ADR, and only then create metadata and lockfiles.
+The platform foundation is codified in [`docs/decisions/0002-platform-foundation-and-toolchain.md`](decisions/0002-platform-foundation-and-toolchain.md):
+- **Runtime & Package Manager**: Bun (`bun@1.3.14+`)
+- **Framework**: Next.js 16 (App Router), React 19, TypeScript
+- **Styling**: Tailwind CSS v4 with OKLCH tokens (`docs/VISUAL_SYSTEM.md`)
+- **Database & ORM**: PostgreSQL with Drizzle ORM
+- **Auth**: Better Auth (`better-auth`)
 
-## Expected workflow
+## Standard Commands
 
-Use a supported Windows toolchain, documented exact versions, and reproducible commands. Prefer Bun if the selected framework and deployment path are verified compatible. Provide scripts for development, formatting, linting, typechecking, unit tests, integration tests, end-to-end tests, build, migration checks, and security audit.
+- **Install dependencies**: `bun install`
+- **Development server**: `bun run dev`
+- **Typecheck**: `bun run typecheck`
+- **Lint**: `bun run lint`
+- **Unit & integration tests**: `bun test`
+- **Database migration check**: `bun run db:migrate:check`
+- **Production build**: `bun run build`
 
-Use `.env.local` for local secrets and keep it ignored. Update `.env.example` with names, purpose, required/optional status, and safe placeholders only.
+## Environment Configuration
 
-Before each prompt: pull/inspect, confirm clean scope, read relevant docs. Before commit: run the established checks individually, exercise the actual path, inspect the diff, and update docs.
+Copy `.env.example` to `.env.local` for local secrets. Never commit `.env.local` or real credentials. All environment variables are validated at runtime in [`lib/env.ts`](../lib/env.ts).
+
+## Prompt Execution Cycle
+
+Before each prompt: pull/inspect, confirm clean working tree, read relevant docs. Before commit: run all verification checks individually (`typecheck`, `lint`, `test`, `db:migrate:check`, `build`), inspect diff, and update docs.
 

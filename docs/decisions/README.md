@@ -31,3 +31,4 @@ Write an ADR when:
 | ADR | Title | Status | Date |
 | --- | --- | --- | --- |
 | [0001](0001-engineering-contract-and-governance.md) | Engineering Contract, Governance, and Decision Workflow | ACCEPTED | 2026-08-24 |
+| [0002](0002-platform-foundation-and-toolchain.md) | Platform Foundation, Runtime Stack, and Toolchain | ACCEPTED | 2026-08-25 |
