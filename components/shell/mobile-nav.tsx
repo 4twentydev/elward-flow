@@ -65,6 +65,13 @@ export function MobileNav() {
               Packets
             </Link>
             <Link
+              href="/quality"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Quality
+            </Link>
+            <Link
               href="/files"
               onClick={() => setOpen(false)}
               className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
