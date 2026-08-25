@@ -42,6 +42,9 @@ export function Header() {
           <Link href="/inventory" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Inventory
           </Link>
+          <Link href="/job-packets" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Packets
+          </Link>
           <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Files
           </Link>

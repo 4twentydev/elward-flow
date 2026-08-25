@@ -58,6 +58,13 @@ export function MobileNav() {
               Inventory
             </Link>
             <Link
+              href="/job-packets"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Packets
+            </Link>
+            <Link
               href="/files"
               onClick={() => setOpen(false)}
               className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"

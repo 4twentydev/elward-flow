@@ -27,6 +27,12 @@ export const ALL_CAPABILITIES = [
   "quality:scrap_rework",
   "quality:manage_schedules",
 
+  // File Vault & Document Intelligence
+  "files:upload",
+
+  // Jobs & Packet Routing
+  "jobs:update_status",
+
   // Quoting & Estimating
   "quoting:create_quote",
   "quoting:approve_margin",
@@ -50,6 +56,8 @@ export const ROLE_CAPABILITIES_MAP: Record<string, Capability[]> = {
     "audit:edit",
     "audit:delete",
     "audit:export_briefing",
+    "files:upload",
+    "jobs:update_status",
     "shopfloor:view_travelers",
     "shopfloor:execute_station",
     "shopfloor:reassign_job",
@@ -73,6 +81,8 @@ export const ROLE_CAPABILITIES_MAP: Record<string, Capability[]> = {
     "audit:create",
     "audit:edit",
     "audit:export_briefing",
+    "files:upload",
+    "jobs:update_status",
     "shopfloor:view_travelers",
     "shopfloor:execute_station",
     "shopfloor:reassign_job",
@@ -93,6 +103,8 @@ export const ROLE_CAPABILITIES_MAP: Record<string, Capability[]> = {
     "audit:create",
     "audit:edit",
     "audit:export_briefing",
+    "files:upload",
+    "jobs:update_status",
     "shopfloor:view_travelers",
     "shopfloor:execute_station",
     "shopfloor:reassign_job",
