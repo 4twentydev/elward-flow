@@ -33,5 +33,4 @@ This repository begins as a documentation-first scaffold. There is no speculativ
 
 ## Repository relationship
 
-`4twenty.dev` owns public positioning, lead capture, and portfolio entry pages. `4twenty-ops` owns authenticated operations, demo organizations, customer configurations, and business modules. They may share documented brand conventions and stable links, but never a database, authentication boundary, deployment environment, or copied implementation by default.
-
+`4twenty.dev` owns public positioning, lead capture, and portfolio entry pages. `4twentyops` owns authenticated operations, demo organizations, customer configurations, and business modules. They may share documented brand conventions and stable links, but never a database, authentication boundary, deployment environment, or copied implementation by default.

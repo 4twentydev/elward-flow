@@ -29,9 +29,8 @@ Organization context must be explicit in every tenant operation. Use transaction
 
 ## Deployment relationship
 
-`4twenty.dev` and `4twenty-ops` deploy independently. Public pages link to safe demo entry points or approved screenshots. No shared database or implicit session.
+`4twenty.dev` and `4twentyops` deploy independently. Public pages link to safe demo entry points or approved screenshots. No shared database or implicit session.
 
 ## Decision records
 
 Create `docs/decisions/NNNN-title.md` before resolving architectural conflicts. Include context, decision, alternatives, consequences, migration/rollback, and status.
-
