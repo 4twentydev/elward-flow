@@ -61,19 +61,30 @@ export function OrganizationWorkspace() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <div className="flex items-center gap-2">
-          <Badge variant="default">CORE//IDENTITY</Badge>
-          <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            Tenant & Membership Management
-          </span>
+      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+        <div>
+          <div className="flex items-center gap-2">
+            <Badge variant="default">CORE//IDENTITY</Badge>
+            <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+              Tenant & Membership Management
+            </span>
+          </div>
+          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+            Organization & Team Settings
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            Manage tenant profile, role capabilities, secure member invitations, and organization access boundaries.
+          </p>
         </div>
-        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-          Organization & Team Settings
-        </h1>
-        <p className="text-sm text-muted-foreground">
-          Manage tenant profile, role capabilities, secure member invitations, and organization access boundaries.
-        </p>
+
+        <div className="flex items-center gap-3">
+          <Button asChild variant="outline" size="sm">
+            <a href="/settings/roles">
+              <ShieldCheck className="mr-2 size-3.5 text-primary" />
+              Role Capability Policies
+            </a>
+          </Button>
+        </div>
       </div>
 
       {feedback && (
