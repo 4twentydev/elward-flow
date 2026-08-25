@@ -50,6 +50,13 @@ export function MobileNav() {
             >
               Demo Orgs
             </Link>
+            <Link
+              href="/settings/organization"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Organization Settings
+            </Link>
           </nav>
         </div>
       )}

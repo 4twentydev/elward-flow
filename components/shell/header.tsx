@@ -6,6 +6,9 @@ import { brand } from "@/lib/brand";
 import { Badge } from "@/components/ui/badge";
 import { MobileNav } from "@/components/shell/mobile-nav";
 
+import { OrgSwitcher } from "@/components/shell/org-switcher";
+import { Settings } from "lucide-react";
+
 export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-sm">
@@ -37,7 +40,15 @@ export function Header() {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <OrgSwitcher />
+          <Link
+            href="/settings/organization"
+            aria-label="Organization Settings"
+            className="hidden rounded-lg border border-border p-1.5 text-muted-foreground transition hover:border-primary/40 hover:text-foreground sm:inline-flex"
+          >
+            <Settings className="size-4" />
+          </Link>
           <MobileNav />
         </div>
       </div>
