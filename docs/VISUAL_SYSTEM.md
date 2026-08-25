@@ -2,7 +2,7 @@
 
 ## Preservation rule
 
-Before any UI, layout, navigation, component, page, demo, or design-system change, inspect the existing 4TWENTY.DEV application and treat its current visual identity as authoritative. Do not redesign the overall theme.
+Before any UI, layout, navigation, component, page, demo, or design-system change, inspect the existing `rivetworks/website` application and treat its current visual identity as authoritative. Do not redesign the overall theme.
 
 Preserve color behavior, typography, spacing philosophy, borders, radii, shadows, navigation, buttons, cards, forms, icons, widths, motion, logo treatment, and overall personality. New work must look as though it has always belonged to the same company.
 
@@ -40,4 +40,3 @@ Preserve an imperfect established pattern unless it blocks the requested feature
 ## Verification
 
 Compare new pages against approved 4TWENTY reference pages at desktop and mobile widths. Ask: “Does this clearly look like the same company and product family?” Record screenshots and any intentional deviations. Completion reports must state whether existing global styles changed.
-

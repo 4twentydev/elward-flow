@@ -29,7 +29,7 @@ Organization context must be explicit in every tenant operation. Use transaction
 
 ## Deployment relationship
 
-`4twenty.dev` and `4twentyops` deploy independently. Public pages link to safe demo entry points or approved screenshots. No shared database or implicit session.
+`rivetworks/website` and `rivetworks/operations` deploy independently. Public pages link to safe demo entry points or approved screenshots. No shared database or implicit session.
 
 ## Decision records
 

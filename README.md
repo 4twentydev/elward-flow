@@ -1,6 +1,6 @@
-# 4TWENTY Operations
+# RivetWorks Operations
 
-4TWENTY Operations is the commercial operational-software platform behind configurable customer implementations and safe interactive demos. It is intentionally separate from [4TWENTY.DEV](https://www.4twenty.dev), the public marketing and portfolio site.
+RivetWorks Operations is the commercial operational-software platform behind configurable customer implementations and safe interactive demos. It is intentionally separate from the `rivetworks/website` marketing and portfolio application. The current 4TWENTY domain remains in service until the separately managed Netlify and domain cutover.
 
 ## Product principle
 
@@ -33,4 +33,4 @@ This repository begins as a documentation-first scaffold. There is no speculativ
 
 ## Repository relationship
 
-`4twenty.dev` owns public positioning, lead capture, and portfolio entry pages. `4twentyops` owns authenticated operations, demo organizations, customer configurations, and business modules. They may share documented brand conventions and stable links, but never a database, authentication boundary, deployment environment, or copied implementation by default.
+`rivetworks/website` owns public positioning, lead capture, and portfolio entry pages. `rivetworks/operations` owns authenticated operations, demo organizations, customer configurations, and business modules. They may share documented brand conventions and stable links, but never a database, authentication boundary, deployment environment, or copied implementation by default.
