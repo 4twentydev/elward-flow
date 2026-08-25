@@ -23,6 +23,13 @@ export function MobileNav() {
         <div className="fixed inset-x-0 top-14 border-b border-border bg-background/95 p-6 backdrop-blur-md">
           <nav className="flex flex-col gap-4" aria-label="Mobile Navigation">
             <Link
+              href="/audit"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              Workflow Audit
+            </Link>
+            <Link
               href="/dashboard"
               onClick={() => setOpen(false)}
               className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"

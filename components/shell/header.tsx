@@ -23,6 +23,9 @@ export function Header() {
         </div>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main Navigation">
+          <Link href="/audit" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Workflow Audit
+          </Link>
           <Link href="/dashboard" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Platform
           </Link>
