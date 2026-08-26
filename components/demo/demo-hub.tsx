@@ -5,10 +5,11 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { RotateCcw, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Factory, Wrench, Zap } from "lucide-react";
+import { RotateCcw, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Factory, Wrench, Zap, Car } from "lucide-react";
 import { FrontRangeWalkthrough } from "@/components/demo/front-range-walkthrough";
 import { SummitFacilityWalkthrough } from "@/components/demo/summit-facility-walkthrough";
 import { SignworksWalkthrough } from "@/components/demo/signworks-walkthrough";
+import { MobileDetailWalkthrough } from "@/components/demo/mobile-detail-walkthrough";
 
 export function DemoHub() {
   const [activeScenario, setActiveScenario] = React.useState("front-range-manufacturing");
@@ -62,6 +63,22 @@ export function DemoHub() {
         { name: "UL Permitting", link: "/files", desc: "Track electrical inspector approvals and permits" },
         { name: "Shop Fabrication", link: "/shopfloor", desc: "Route aluminum backs, acrylic faces, and LED wiring" },
         { name: "Crane Rigging", link: "/shipping", desc: "Boom crane dispatch and illuminated proof-of-work closeout" },
+      ],
+    },
+    {
+      slug: "peak-mobile-detail",
+      name: "Peak Mobile Detail",
+      industry: "Mobile Detailing & Ceramic Quartz",
+      icon: Car,
+      description: "On-demand mobile detailing vans, ultrasonic paint depth telemetry, on-site add-on consent, and simulated payment capture.",
+      jobsCount: 6,
+      wipValue: "$4,200",
+      onTimeRate: "99.8%",
+      steps: [
+        { name: "Intake Telemetry", link: "/shopfloor", desc: "Measure ultrasonic paint depth and paint condition" },
+        { name: "Mobile Checklist", link: "/quality", desc: "Execute multi-stage wash, decon, and ceramic cure" },
+        { name: "Add-On Consent", link: "/quotes", desc: "Capture client digital approval for engine bay steam" },
+        { name: "Simulated Payment", link: "/analytics", desc: "Capture payment with zero external side effects" },
       ],
     },
   ];
@@ -179,6 +196,8 @@ export function DemoHub() {
         <SummitFacilityWalkthrough />
       ) : activeScenario === "mile-high-signworks" ? (
         <SignworksWalkthrough />
+      ) : activeScenario === "peak-mobile-detail" ? (
+        <MobileDetailWalkthrough />
       ) : (
         <Card>
           <CardHeader>
