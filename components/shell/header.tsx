@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { brand } from "@/lib/brand";
+import { YorksteadMark } from "@/components/brand/yorkstead-logo";
 import { Badge } from "@/components/ui/badge";
 import { MobileNav } from "@/components/shell/mobile-nav";
 
@@ -15,9 +16,10 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
-          <Link href="/" className="inline-flex items-center gap-3" aria-label={brand.name}>
+          <Link href="/" className="inline-flex items-center gap-2.5" aria-label={brand.name}>
+            <YorksteadMark size={24} />
             <span className="font-mono text-sm font-bold tracking-[0.24em] text-foreground">
-              {brand.wordmark}<span className="text-primary">{brand.domainSuffix}</span>
+              {brand.wordmark}<span className="text-primary">.{brand.domainSuffix}</span>
             </span>
             <span className="hidden border-l border-border pl-3 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground sm:inline-block">
               {brand.systemName}

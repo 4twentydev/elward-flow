@@ -4,6 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { brand } from "@/lib/brand";
+import { YorksteadMark } from "@/components/brand/yorkstead-logo";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -21,6 +23,12 @@ export function MobileNav() {
 
       {open && (
         <div className="fixed inset-x-0 top-14 border-b border-border bg-background/95 p-6 backdrop-blur-md">
+          <div className="mb-4 flex items-center gap-2.5 border-b border-border pb-3">
+            <YorksteadMark size={20} />
+            <span className="font-mono text-xs font-bold tracking-[0.24em] text-foreground">
+              {brand.wordmark}<span className="text-primary">.{brand.domainSuffix}</span>
+            </span>
+          </div>
           <nav className="flex flex-col gap-4" aria-label="Mobile Navigation">
             <Link
               href="/audit"
