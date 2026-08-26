@@ -10,6 +10,7 @@ import { FrontRangeWalkthrough } from "@/components/demo/front-range-walkthrough
 import { SummitFacilityWalkthrough } from "@/components/demo/summit-facility-walkthrough";
 import { SignworksWalkthrough } from "@/components/demo/signworks-walkthrough";
 import { MobileDetailWalkthrough } from "@/components/demo/mobile-detail-walkthrough";
+import { SalesPresenterCockpit } from "@/components/demo/sales-presenter-cockpit";
 
 export function DemoHub() {
   const [activeScenario, setActiveScenario] = React.useState("front-range-manufacturing");
@@ -135,6 +136,12 @@ export function DemoHub() {
           <span>{resetState}</span>
         </div>
       )}
+
+      {/* Guided Sales Presenter Cockpit */}
+      <SalesPresenterCockpit
+        currentScenarioSlug={activeScenario}
+        onScenarioChange={(slug) => setActiveScenario(slug)}
+      />
 
       {/* Scenario Selector */}
       <div className="grid gap-4 sm:grid-cols-2">
