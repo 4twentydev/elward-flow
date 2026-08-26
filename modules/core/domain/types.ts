@@ -25,6 +25,7 @@ export interface Organization {
   name: string;
   slug: string;
   status: OrgStatus;
+  isDemo?: boolean;
   createdAt: string;
   updatedAt: string;
 }
