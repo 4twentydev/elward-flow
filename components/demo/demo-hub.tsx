@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RotateCcw, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Factory, Wrench } from "lucide-react";
+import { FrontRangeWalkthrough } from "@/components/demo/front-range-walkthrough";
 
 export function DemoHub() {
   const [activeScenario, setActiveScenario] = React.useState("front-range-manufacturing");
@@ -154,45 +155,49 @@ export function DemoHub() {
       </div>
 
       {/* Guided Walkthrough Storyline */}
-      <Card>
-        <CardHeader>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <Sparkles className="size-5 text-primary" />
-              <div>
-                <CardTitle className="text-base">Guided Story Walkthrough: {current.name}</CardTitle>
-                <CardDescription>Step-by-step interactive workflow through the live system.</CardDescription>
-              </div>
-            </div>
-            <Badge variant="outline" className="font-mono text-[10px]">
-              {current.steps.length} INTERACTIVE STAGES
-            </Badge>
-          </div>
-        </CardHeader>
-        <CardContent className="pt-0">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {current.steps.map((st, idx) => (
-              <div key={idx} className="rounded-lg border border-border bg-card p-4 space-y-2 flex flex-col justify-between">
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold text-primary">STAGE 0{idx + 1}</span>
-                    <Badge variant="outline" className="font-mono text-[8px]">{st.name}</Badge>
-                  </div>
-                  <p className="font-mono text-xs font-semibold text-foreground">{st.desc}</p>
+      {activeScenario === "front-range-manufacturing" ? (
+        <FrontRangeWalkthrough />
+      ) : (
+        <Card>
+          <CardHeader>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <Sparkles className="size-5 text-primary" />
+                <div>
+                  <CardTitle className="text-base">Guided Story Walkthrough: {current.name}</CardTitle>
+                  <CardDescription>Step-by-step interactive workflow through the live system.</CardDescription>
                 </div>
-
-                <Link
-                  href={st.link}
-                  className="mt-3 inline-flex items-center justify-between rounded border border-border bg-muted/40 px-2.5 py-1.5 font-mono text-[11px] text-foreground transition hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
-                >
-                  <span>Launch Workspace</span>
-                  <ArrowRight className="size-3" />
-                </Link>
               </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+              <Badge variant="outline" className="font-mono text-[10px]">
+                {current.steps.length} INTERACTIVE STAGES
+              </Badge>
+            </div>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {current.steps.map((st, idx) => (
+                <div key={idx} className="rounded-lg border border-border bg-card p-4 space-y-2 flex flex-col justify-between">
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-[10px] font-bold text-primary">STAGE 0{idx + 1}</span>
+                      <Badge variant="outline" className="font-mono text-[8px]">{st.name}</Badge>
+                    </div>
+                    <p className="font-mono text-xs font-semibold text-foreground">{st.desc}</p>
+                  </div>
+
+                  <Link
+                    href={st.link}
+                    className="mt-3 inline-flex items-center justify-between rounded border border-border bg-muted/40 px-2.5 py-1.5 font-mono text-[11px] text-foreground transition hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+                  >
+                    <span>Launch Workspace</span>
+                    <ArrowRight className="size-3" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Demo Guardrails Security Summary */}
       <Card className="border-border bg-card/50">
