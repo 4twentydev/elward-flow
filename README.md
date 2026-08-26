@@ -2,7 +2,7 @@
 
 The unified industrial operations platform built by Yorkstead for custom manufacturing, fabrication, and field service workflows.
 
-## Core Capabilities Implemented (Prompts 00 - 26)
+## Core Capabilities Implemented (Prompts 00 - 29)
 
 - **Phase 00: Foundation & Workflow Audit Engine**
   - Architecture Decision Records (`docs/adr/ADR-0001` through `ADR-0004`)
@@ -23,6 +23,9 @@ The unified industrial operations platform built by Yorkstead for custom manufac
   - Machine Registers, Downtime Intervals, PM Schedules, & Return-To-Service (`/maintenance`)
   - Packaging Units, Gross Weight Limits, & Palletization Manifests (`/packaging`)
   - Shipping Load Builder, Sequenced Route Stops, Digital BOL, & Proof of Delivery (`/shipping`)
+  - QuoteFlow estimating and quote lifecycle (`/quoting`)
+  - Purchasing and purchase-order workflows (`/purchasing`)
+  - Governed operational knowledge base (`/knowledge`)
 
 ## Toolchain & Verification
 

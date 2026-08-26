@@ -12,7 +12,7 @@ Before work, read this file, the requested prompt, `docs/VISUAL_SYSTEM.md`, `doc
 - **Short Brand Name**: `Yorkstead`
 - **Commercial Platform**: `Yorkstead Operations`
 - **Public Company Website**: `https://yorkstead.com` (`yorkstead-website`, Netlify: `yorkstead`)
-- **Operations Application**: `https://ops.yorkstead.com` (`yorkstead-operations`, Netlify: `yorkstead-operations`)
+- **Operations Application**: `https://ops.yorkstead.com` (`yorkstead-operations`, Vercel: `yorkstead-operations`)
 - **Package Namespace**: `@yorkstead`
 - **Retired Brand Names**: `4TWENTY`, `4twentydev`, `4twentyops`, `Groundline`, `RivetWorks`, and `rivetworks.software` are retired from customer-facing branding and should only appear in historical records or migration decision notes.
 
