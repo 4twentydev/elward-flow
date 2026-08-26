@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RotateCcw, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Factory, Wrench } from "lucide-react";
 import { FrontRangeWalkthrough } from "@/components/demo/front-range-walkthrough";
+import { SummitFacilityWalkthrough } from "@/components/demo/summit-facility-walkthrough";
 
 export function DemoHub() {
   const [activeScenario, setActiveScenario] = React.useState("front-range-manufacturing");
@@ -157,6 +158,8 @@ export function DemoHub() {
       {/* Guided Walkthrough Storyline */}
       {activeScenario === "front-range-manufacturing" ? (
         <FrontRangeWalkthrough />
+      ) : activeScenario === "summit-facility-services" ? (
+        <SummitFacilityWalkthrough />
       ) : (
         <Card>
           <CardHeader>
