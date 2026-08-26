@@ -107,6 +107,13 @@ export function MobileNav() {
               Purchasing
             </Link>
             <Link
+              href="/knowledge"
+              onClick={() => setOpen(false)}
+              className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
+            >
+              KnowHow
+            </Link>
+            <Link
               href="/files"
               onClick={() => setOpen(false)}
               className="font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary"
