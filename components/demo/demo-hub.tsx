@@ -5,9 +5,10 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { RotateCcw, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Factory, Wrench } from "lucide-react";
+import { RotateCcw, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Factory, Wrench, Zap } from "lucide-react";
 import { FrontRangeWalkthrough } from "@/components/demo/front-range-walkthrough";
 import { SummitFacilityWalkthrough } from "@/components/demo/summit-facility-walkthrough";
+import { SignworksWalkthrough } from "@/components/demo/signworks-walkthrough";
 
 export function DemoHub() {
   const [activeScenario, setActiveScenario] = React.useState("front-range-manufacturing");
@@ -45,6 +46,22 @@ export function DemoHub() {
         { name: "LOTO Safety Log", link: "/maintenance", desc: "Authorize return-to-service with verified checklists" },
         { name: "KnowHow SOPs", link: "/knowledge", desc: "Search citation-backed chiller troubleshooting guides" },
         { name: "Analytics Pulse", link: "/analytics", desc: "Review executive uptime KPIs and capacity signals" },
+      ],
+    },
+    {
+      slug: "mile-high-signworks",
+      name: "Mile High Signworks",
+      industry: "Architectural Signage & Crane Rigging",
+      icon: Zap,
+      description: "Custom illuminated LED channel letters, vector revision lock, UL electrical permitting, and 45ft boom crane installations.",
+      jobsCount: 14,
+      wipValue: "$96,400",
+      onTimeRate: "98.2%",
+      steps: [
+        { name: "Vector Art Lock", link: "/shopfloor", desc: "Enforce client revision signoff before releasing to CNC" },
+        { name: "UL Permitting", link: "/files", desc: "Track electrical inspector approvals and permits" },
+        { name: "Shop Fabrication", link: "/shopfloor", desc: "Route aluminum backs, acrylic faces, and LED wiring" },
+        { name: "Crane Rigging", link: "/shipping", desc: "Boom crane dispatch and illuminated proof-of-work closeout" },
       ],
     },
   ];
@@ -160,6 +177,8 @@ export function DemoHub() {
         <FrontRangeWalkthrough />
       ) : activeScenario === "summit-facility-services" ? (
         <SummitFacilityWalkthrough />
+      ) : activeScenario === "mile-high-signworks" ? (
+        <SignworksWalkthrough />
       ) : (
         <Card>
           <CardHeader>
