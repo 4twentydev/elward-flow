@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { MobileNav } from "@/components/shell/mobile-nav";
 import { OrgSwitcher } from "@/components/shell/org-switcher";
 import { NotificationsDrawer } from "@/components/shell/notifications-drawer";
-import { Settings, ChevronDown, Layers } from "lucide-react";
+import { Settings, ChevronDown } from "lucide-react";
 
 export function Header() {
   const [moreOpen, setMoreOpen] = React.useState(false);

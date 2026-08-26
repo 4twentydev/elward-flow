@@ -1,7 +1,6 @@
 import {
   PortfolioItem,
   DemoGuardrailPolicy,
-  DemoOrganizationContext,
 } from "../domain/types";
 import { SessionContext } from "../../core/domain/types";
 import { authorizationService } from "../../core/application/authorization-service";

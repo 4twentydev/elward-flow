@@ -24,6 +24,42 @@ export interface DemoGuardrailPolicy {
   allowSelfServiceReset: boolean;
 }
 
+export interface GuidedStoryStep {
+  stepNumber: number;
+  title: string;
+  module: string;
+  targetPath: string;
+  description: string;
+  keyAction: string;
+  expectedOutcome: string;
+}
+
+export interface DemoScenarioManifest {
+  scenarioSlug: string;
+  name: string;
+  industry: string;
+  description: string;
+  version: string;
+  storyNarrative: string;
+  guidedSteps: GuidedStoryStep[];
+  highlights: string[];
+  initialMetrics: {
+    activeJobs: number;
+    wipValueFormatted: string;
+    onTimeRate: string;
+    firstPassYield: string;
+  };
+}
+
+export interface DemoResetResult {
+  organizationId: string;
+  scenarioSlug: string;
+  recordsResetCount: number;
+  resetAt: string;
+  status: "success" | "rate_limited" | "unauthorized";
+  message: string;
+}
+
 export interface DemoOrganizationContext {
   id: string;
   name: string;
