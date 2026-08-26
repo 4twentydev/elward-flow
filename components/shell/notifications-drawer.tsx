@@ -15,6 +15,7 @@ interface NotificationItem {
 
 export function NotificationsDrawer() {
   const [open, setOpen] = React.useState(false);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
   const [notifications, setNotifications] = React.useState<NotificationItem[]>([
     {
       id: "notif_1",
@@ -36,6 +37,7 @@ export function NotificationsDrawer() {
       id: "notif_3",
       title: "Platform Shell Initialized",
       message: "ADR-0002 platform foundation verified and deployed.",
+      link: "/",
       read: true,
       timeAgo: "1h ago",
     },
@@ -47,27 +49,37 @@ export function NotificationsDrawer() {
     setNotifications(notifications.map((n) => ({ ...n, read: true })));
   };
 
+  React.useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
         aria-label="View Notifications"
-        className="relative rounded-lg border border-border p-1.5 text-muted-foreground transition hover:border-primary/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className="relative rounded-lg border border-border p-2 text-muted-foreground transition hover:border-primary/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
       >
         <Bell className="size-4" />
         {unreadCount > 0 && (
-          <span className="absolute -right-1 -top-1 flex size-4 items-center justify-center rounded-full bg-primary font-mono text-[9px] font-bold text-primary-foreground">
+          <span className="absolute -right-0.5 -top-0.5 flex size-3.5 items-center justify-center rounded-full bg-primary font-mono text-[8px] font-bold text-primary-foreground">
             {unreadCount}
           </span>
         )}
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-80 rounded-xl border border-border bg-card p-3 shadow-2xl backdrop-blur-md z-50">
+        <div className="absolute right-0 top-full mt-2 w-[calc(100vw-1.5rem)] sm:w-80 max-w-sm rounded-xl border border-border bg-card p-3 shadow-2xl backdrop-blur-md z-50">
           <div className="flex items-center justify-between border-b border-border pb-2">
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs font-semibold text-foreground">Notifications</span>
-              {unreadCount > 0 && <Badge variant="default" className="text-[9px]">{unreadCount} new</Badge>}
+              {unreadCount > 0 && <Badge variant="default" className="text-[9px] px-1 py-0">{unreadCount} new</Badge>}
             </div>
             {unreadCount > 0 && (
               <button

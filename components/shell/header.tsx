@@ -25,24 +25,24 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/95 backdrop-blur-md">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-3 sm:px-6 lg:px-8">
         {/* Brand Lockup */}
-        <div className="flex items-center gap-3">
-          <Link href="/" className="inline-flex items-center gap-2.5" aria-label={brand.name}>
-            <YorksteadMark size={24} />
-            <span className="font-mono text-sm font-bold tracking-[0.24em] text-foreground">
-              {brand.wordmark}<span className="text-primary">.{brand.domainSuffix}</span>
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <Link href="/" className="inline-flex items-center gap-2" aria-label={brand.name}>
+            <YorksteadMark size={22} />
+            <span className="font-mono text-xs sm:text-sm font-bold tracking-[0.2em] text-foreground">
+              {brand.wordmark}<span className="text-primary hidden sm:inline">.{brand.domainSuffix}</span>
             </span>
-            <span className="hidden border-l border-border pl-3 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground lg:inline-block">
+            <span className="hidden border-l border-border pl-2.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground xl:inline-block">
               {brand.systemName}
             </span>
           </Link>
-          <Badge variant="default" className="hidden xl:inline-flex">v{brand.version}</Badge>
+          <Badge variant="default" className="hidden 2xl:inline-flex text-[9px] px-1.5 py-0">v{brand.version}</Badge>
         </div>
 
-        {/* Primary Desktop Navigation */}
-        <nav className="hidden items-center gap-5 md:flex lg:gap-6" aria-label="Main Navigation">
+        {/* Primary Desktop Navigation (Visible on lg+ screens) */}
+        <nav className="hidden items-center gap-4 xl:gap-6 lg:flex" aria-label="Main Navigation">
           <Link href="/jobs" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Jobs
           </Link>
@@ -77,8 +77,8 @@ export function Header() {
             </button>
 
             {moreOpen && (
-              <div className="absolute right-0 top-full mt-2 w-64 rounded-lg border border-border bg-card/98 p-2 shadow-xl backdrop-blur-md z-50">
-                <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-b border-border mb-1">
+              <div className="absolute right-0 top-full mt-2 w-72 rounded-lg border border-border bg-card/98 p-2.5 shadow-2xl backdrop-blur-md z-50">
+                <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-b border-border mb-1.5">
                   Factory Operations
                 </div>
                 <div className="grid grid-cols-2 gap-1">
@@ -126,7 +126,7 @@ export function Header() {
                   </Link>
                 </div>
 
-                <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-b border-border my-1">
+                <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-b border-border my-1.5">
                   Platform & Tools
                 </div>
                 <div className="grid grid-cols-2 gap-1">
@@ -165,7 +165,7 @@ export function Header() {
         </nav>
 
         {/* Right Shell Controls */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
           <OrgSwitcher />
           <NotificationsDrawer />
           <Link
