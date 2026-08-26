@@ -6,35 +6,43 @@ import { brand } from "@/lib/brand";
 import { YorksteadMark } from "@/components/brand/yorkstead-logo";
 import { Badge } from "@/components/ui/badge";
 import { MobileNav } from "@/components/shell/mobile-nav";
-
 import { OrgSwitcher } from "@/components/shell/org-switcher";
 import { NotificationsDrawer } from "@/components/shell/notifications-drawer";
-import { Settings } from "lucide-react";
+import { Settings, ChevronDown, Layers } from "lucide-react";
 
 export function Header() {
+  const [moreOpen, setMoreOpen] = React.useState(false);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setMoreOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4">
+        {/* Brand Lockup */}
+        <div className="flex items-center gap-3">
           <Link href="/" className="inline-flex items-center gap-2.5" aria-label={brand.name}>
             <YorksteadMark size={24} />
             <span className="font-mono text-sm font-bold tracking-[0.24em] text-foreground">
               {brand.wordmark}<span className="text-primary">.{brand.domainSuffix}</span>
             </span>
-            <span className="hidden border-l border-border pl-3 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground sm:inline-block">
+            <span className="hidden border-l border-border pl-3 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground lg:inline-block">
               {brand.systemName}
             </span>
           </Link>
-          <Badge variant="default" className="hidden sm:inline-flex">v{brand.version}</Badge>
+          <Badge variant="default" className="hidden xl:inline-flex">v{brand.version}</Badge>
         </div>
 
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Main Navigation">
-          <Link href="/audit" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Workflow Audit
-          </Link>
-          <Link href="/directory" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Directory
-          </Link>
+        {/* Primary Desktop Navigation */}
+        <nav className="hidden items-center gap-5 md:flex lg:gap-6" aria-label="Main Navigation">
           <Link href="/jobs" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Jobs
           </Link>
@@ -44,57 +52,126 @@ export function Header() {
           <Link href="/inventory" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Inventory
           </Link>
-          <Link href="/job-packets" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Packets
-          </Link>
-          <Link href="/quality" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Quality
-          </Link>
-          <Link href="/maintenance" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Maintenance
-          </Link>
-          <Link href="/packaging" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Packaging
-          </Link>
-          <Link href="/shipping" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Shipping
-          </Link>
           <Link href="/quotes" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Quotes
           </Link>
           <Link href="/purchasing" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Purchasing
           </Link>
-          <Link href="/knowledge" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            KnowHow
+          <Link href="/quality" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Quality
           </Link>
           <Link href="/analytics" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Analytics
           </Link>
-          <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Files
-          </Link>
-          <Link href="/activity" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Activity
-          </Link>
-          <Link href="/dashboard" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Platform
-          </Link>
-          <Link href="/modules" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Modules
-          </Link>
-          <Link href="/demo" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
-            Demo Orgs
-          </Link>
+
+          {/* More Operations Dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setMoreOpen(!moreOpen)}
+              className="inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground focus:outline-none"
+              aria-expanded={moreOpen}
+            >
+              <span>Modules</span>
+              <ChevronDown className={`size-3 transition-transform ${moreOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {moreOpen && (
+              <div className="absolute right-0 top-full mt-2 w-64 rounded-lg border border-border bg-card/98 p-2 shadow-xl backdrop-blur-md z-50">
+                <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-b border-border mb-1">
+                  Factory Operations
+                </div>
+                <div className="grid grid-cols-2 gap-1">
+                  <Link
+                    href="/maintenance"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Maintenance
+                  </Link>
+                  <Link
+                    href="/packaging"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Packaging
+                  </Link>
+                  <Link
+                    href="/shipping"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Shipping
+                  </Link>
+                  <Link
+                    href="/job-packets"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Job Packets
+                  </Link>
+                  <Link
+                    href="/knowledge"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    KnowHow
+                  </Link>
+                  <Link
+                    href="/directory"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Directory
+                  </Link>
+                </div>
+
+                <div className="px-2 py-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-b border-border my-1">
+                  Platform & Tools
+                </div>
+                <div className="grid grid-cols-2 gap-1">
+                  <Link
+                    href="/audit"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Audit Engine
+                  </Link>
+                  <Link
+                    href="/files"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    File Vault
+                  </Link>
+                  <Link
+                    href="/activity"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Activity Log
+                  </Link>
+                  <Link
+                    href="/demo"
+                    onClick={() => setMoreOpen(false)}
+                    className="rounded px-2 py-1.5 text-xs font-mono text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    Demo Orgs
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
-        <div className="flex items-center gap-3">
+        {/* Right Shell Controls */}
+        <div className="flex items-center gap-2.5 sm:gap-3">
           <OrgSwitcher />
           <NotificationsDrawer />
           <Link
             href="/settings/organization"
             aria-label="Organization Settings"
-            className="hidden rounded-lg border border-border p-1.5 text-muted-foreground transition hover:border-primary/40 hover:text-foreground sm:inline-flex"
+            className="hidden rounded-lg border border-border p-2 text-muted-foreground transition hover:border-primary/40 hover:text-foreground sm:inline-flex"
           >
             <Settings className="size-4" />
           </Link>
