@@ -10,7 +10,7 @@
 
 ## Context and Problem Statement
 
-4TWENTY Operations requires a verified, production-ready foundation stack compatible with Windows-first development and serverless Vercel deployment. The stack must support a strict modular monolith, strong typing across database models and API contracts, high-density industrial UX with OKLCH styling, robust multi-tenant authorization, and automated quality checks (typecheck, lint, test, build, migration audit).
+Yorkstead Operations requires a verified, production-ready foundation stack compatible with Windows-first development and serverless Vercel deployment. The stack must support a strict modular monolith, strong typing across database models and API contracts, high-density industrial UX with OKLCH styling, robust multi-tenant authorization, and automated quality checks (typecheck, lint, test, build, migration audit).
 
 ## Decision
 

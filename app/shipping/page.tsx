@@ -1,7 +1,7 @@
 import { ShippingWorkspace } from "@/components/shipping/shipping-workspace";
 
 export const metadata = {
-  title: "Shipping & Load Builder | 4TWENTY Operations",
+  title: "Shipping & Load Builder | Yorkstead Operations",
   description: "Shipment manifests, carrier assignment, bills of lading, and proof of delivery tracking.",
 };
 

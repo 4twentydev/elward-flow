@@ -1,7 +1,7 @@
 import { ConfigurationWorkspace } from "@/components/config/configuration-workspace";
 
 export const metadata = {
-  title: "Configuration & Entitlements | 4TWENTY Operations",
+  title: "Configuration & Entitlements | Yorkstead Operations",
   description: "Versioned organization settings, module entitlements, terminology mappings, and workflow policies.",
 };
 

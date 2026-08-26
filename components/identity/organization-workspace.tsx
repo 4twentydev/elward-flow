@@ -24,7 +24,7 @@ interface Invite {
 
 export function OrganizationWorkspace() {
   const [members, setMembers] = React.useState<Member[]>([
-    { id: "usr_1", name: "Brandon York", email: "brandon@4twenty.dev", role: "owner", status: "active" },
+    { id: "usr_1", name: "Brandon York", email: "brandon@yorkstead.com", role: "owner", status: "active" },
     { id: "usr_2", name: "Alex Mercer", email: "alex.mercer@synthetic.dev", role: "admin", status: "active" },
     { id: "usr_3", name: "Dana Scully", email: "dana.scully@synthetic.dev", role: "operator", status: "active" },
   ]);

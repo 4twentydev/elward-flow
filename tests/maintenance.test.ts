@@ -13,7 +13,7 @@ describe("Maintenance & Downtime Module", () => {
 
   it("reports downtime, opens interval, and rejects overlapping intervals", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -46,7 +46,7 @@ describe("Maintenance & Downtime Module", () => {
 
   it("resolves downtime and authorizes return to service with labor and parts tracking", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -87,7 +87,7 @@ describe("Maintenance & Downtime Module", () => {
 
   it("derives fleet metrics and uptime statistics", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

@@ -1,6 +1,6 @@
 # Architecture Decision Records (ADRs)
 
-Architecture Decision Records capture significant architectural, structural, security, data-boundary, and operational decisions in 4TWENTY Operations.
+Architecture Decision Records capture significant architectural, structural, security, data-boundary, and operational decisions in Yorkstead Operations.
 
 ## When to write an ADR
 

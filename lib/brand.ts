@@ -1,9 +1,9 @@
 export const brand = {
-  name: "4TWENTY Operations",
-  wordmark: "4TWENTY",
-  domainSuffix: ".DEV",
+  name: "Yorkstead Operations",
+  wordmark: "YORKSTEAD",
+  domainSuffix: "SYSTEMS",
   systemName: "OPERATIONS//CTRL",
-  siteURL: "https://www.4twenty.dev",
+  siteURL: "https://yorkstead.com",
   descriptor: "Industrial software and workflow automation",
   version: "0.1.0",
 } as const;

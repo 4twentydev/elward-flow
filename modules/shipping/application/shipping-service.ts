@@ -40,7 +40,7 @@ export class ShippingService {
       totalPackages: 1,
       totalGrossWeightLbs: 45.0,
       status: "staged_for_loading",
-      billOfLadingBarcode: "4twenty://bol/BOL-2026-092",
+      billOfLadingBarcode: "yorkstead://bol/BOL-2026-092",
       createdAt: new Date().toISOString(),
     };
 
@@ -96,7 +96,7 @@ export class ShippingService {
       totalPackages: packageNumbers.length,
       totalGrossWeightLbs: 0,
       status: "draft_manifest",
-      billOfLadingBarcode: `4twenty://bol/${manifestNumber}`,
+      billOfLadingBarcode: `yorkstead://bol/${manifestNumber}`,
       createdAt: now,
     };
 

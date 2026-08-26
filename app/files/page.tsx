@@ -1,7 +1,7 @@
 import { FileManager } from "@/components/files/file-manager";
 
 export const metadata = {
-  title: "Private File Storage | 4TWENTY Operations",
+  title: "Private File Storage | Yorkstead Operations",
   description: "Secure tenant storage with expiring presigned download links.",
 };
 

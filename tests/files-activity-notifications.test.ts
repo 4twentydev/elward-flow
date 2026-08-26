@@ -21,7 +21,7 @@ describe("Files, Activity, and Notifications", () => {
   describe("File Storage & Expiring Links", () => {
     it("generates presigned upload and expiring download URLs within tenant boundaries", async () => {
       const { user: owner } = identityService.bootstrapOwner({
-        email: "owner@4twenty.dev",
+        email: "owner@yorkstead.com",
         name: "Brandon",
         organizationName: "Factory A",
         organizationSlug: "factory-a",
@@ -36,20 +36,20 @@ describe("Files, Activity, and Notifications", () => {
       });
 
       expect(fileRecord.id).toBeDefined();
-      expect(uploadUrl).toContain("storage.synthetic.ops.4twenty.dev");
+      expect(uploadUrl).toContain("storage.synthetic.ops.yorkstead.com");
 
       const { downloadUrl, expiresAt } = await fileService.getAuthorizedDownloadUrl(
         sessionA,
         fileRecord.id
       );
 
-      expect(downloadUrl).toContain("storage.synthetic.ops.4twenty.dev/download");
+      expect(downloadUrl).toContain("storage.synthetic.ops.yorkstead.com/download");
       expect(expiresAt).toBeDefined();
     });
 
     it("rejects cross-tenant file access and disallowed MIME types", async () => {
       const { user: owner } = identityService.bootstrapOwner({
-        email: "owner@4twenty.dev",
+        email: "owner@yorkstead.com",
         name: "Brandon",
         organizationName: "Factory A",
         organizationSlug: "factory-a",

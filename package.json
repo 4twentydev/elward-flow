@@ -1,12 +1,13 @@
 {
-  "name": "elward-flow",
+  "name": "@yorkstead/operations",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4twentydev/elward-flow.git"
+    "url": "git+https://github.com/yorkstead/yorkstead-operations.git"
   },
-  "homepage": "https://www.4twenty.dev",
+  "homepage": "https://yorkstead.com",
   "packageManager": "bun@1.3.14",
   "scripts": {
     "dev": "next dev",

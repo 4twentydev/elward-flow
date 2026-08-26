@@ -152,9 +152,9 @@ export class IdentityService {
 
     await this.emailAdapter.sendEmail({
       to: invitation.email,
-      subject: `Invitation to join ${org.name} on 4TWENTY Operations`,
-      htmlBody: `<p>You have been invited to join <strong>${org.name}</strong> as <strong>${params.role}</strong>.</p><p>Accept your invitation: <a href="https://ops.4twenty.dev/invite/${token}">Accept Invitation</a></p>`,
-      textBody: `You have been invited to join ${org.name} as ${params.role}. Accept: https://ops.4twenty.dev/invite/${token}`,
+      subject: `Invitation to join ${org.name} on Yorkstead Operations`,
+      htmlBody: `<p>You have been invited to join <strong>${org.name}</strong> as <strong>${params.role}</strong>.</p><p>Accept your invitation: <a href="https://ops.yorkstead.com/invite/${token}">Accept Invitation</a></p>`,
+      textBody: `You have been invited to join ${org.name} as ${params.role}. Accept: https://ops.yorkstead.com/invite/${token}`,
     });
 
     return invitation;

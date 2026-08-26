@@ -1,7 +1,7 @@
 import { AuditAssessmentView } from "@/components/audit/audit-assessment-view";
 
 export const metadata = {
-  title: "Workflow Audit Diagnostic | 4TWENTY Operations",
+  title: "Workflow Audit Diagnostic | Yorkstead Operations",
   description: "Internal operational friction evaluation and phased recommendation engine.",
 };
 

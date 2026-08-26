@@ -13,7 +13,7 @@ describe("Quality & Non-Conformance (NCR) Module", () => {
 
   it("records first article inspection and validates checklist results", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -42,7 +42,7 @@ describe("Quality & Non-Conformance (NCR) Module", () => {
 
   it("creates NCR, applies containment, and dispositions with segregation of duties", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -95,7 +95,7 @@ describe("Quality & Non-Conformance (NCR) Module", () => {
 
   it("calculates quality metrics and first pass yield", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

@@ -1,7 +1,7 @@
 import { MaintenanceWorkspace } from "@/components/maintenance/maintenance-workspace";
 
 export const metadata = {
-  title: "Equipment Maintenance & Downtime | 4TWENTY Operations",
+  title: "Equipment Maintenance & Downtime | Yorkstead Operations",
   description: "Asset tracking, PM schedules, downtime intervals, and return-to-service authorization.",
 };
 

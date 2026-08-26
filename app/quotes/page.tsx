@@ -1,7 +1,7 @@
 import { QuoteFlowWorkspace } from "@/components/quoting/quoteflow-workspace";
 
 export const metadata = {
-  title: "QuoteFlow & Estimating | RivetWorks Operations",
+  title: "QuoteFlow & Estimating | Yorkstead Operations",
   description: "Cost breakdown modeling, margin governance, revisions, and one-click quote-to-job conversion.",
 };
 

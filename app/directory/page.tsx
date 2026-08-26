@@ -1,7 +1,7 @@
 import { MasterDataWorkspace } from "@/components/master-data/master-data-workspace";
 
 export const metadata = {
-  title: "Customers, Vendors & Facilities | 4TWENTY Operations",
+  title: "Customers, Vendors & Facilities | Yorkstead Operations",
   description: "Shared master records for customer accounts, suppliers, contacts, and facility locations.",
 };
 

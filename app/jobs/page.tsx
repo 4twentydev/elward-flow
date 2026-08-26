@@ -1,7 +1,7 @@
 import { JobsListWorkspace } from "@/components/jobs/jobs-list-workspace";
 
 export const metadata = {
-  title: "Jobs & Work Orders | 4TWENTY Operations",
+  title: "Jobs & Work Orders | Yorkstead Operations",
   description: "Work order aggregate, revisions, customer links, and guarded workflow progression.",
 };
 

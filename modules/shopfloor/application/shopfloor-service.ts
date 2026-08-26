@@ -70,7 +70,7 @@ export class ShopfloorService {
       id,
       organizationId: session.activeOrganization.id,
       travelerNumber,
-      qrCodeData: `4twenty://traveler/${travelerNumber}`,
+      qrCodeData: `yorkstead://traveler/${travelerNumber}`,
       jobId: params.jobId,
       jobNumber: params.jobNumber,
       partDescription: params.partDescription.trim(),
@@ -214,7 +214,7 @@ export class ShopfloorService {
 
   // 5. Lookups
   getTravelerByQr(session: SessionContext, qrOrNumber: string): DigitalTraveler {
-    const clean = qrOrNumber.replace("4twenty://traveler/", "").trim().toUpperCase();
+    const clean = qrOrNumber.replace("yorkstead://traveler/", "").trim().toUpperCase();
     const traveler = Array.from(this.travelers.values()).find(
       (t) =>
         t.organizationId === session.activeOrganization.id &&

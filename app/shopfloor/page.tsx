@@ -1,7 +1,7 @@
 import { ShopfloorTerminal } from "@/components/shopfloor/shopfloor-terminal";
 
 export const metadata = {
-  title: "Shopfloor Terminal & Digital Traveler | 4TWENTY Operations",
+  title: "Shopfloor Terminal & Digital Traveler | Yorkstead Operations",
   description: "Mobile operator execution terminal, digital traveler routing, and dispatch board.",
 };
 

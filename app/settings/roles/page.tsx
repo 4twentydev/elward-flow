@@ -1,7 +1,7 @@
 import { RolesCapabilitiesWorkspace } from "@/components/identity/roles-capabilities-workspace";
 
 export const metadata = {
-  title: "Roles & Capabilities | 4TWENTY Operations",
+  title: "Roles & Capabilities | Yorkstead Operations",
   description: "Server-side capability matrix and least-privilege authorization policies.",
 };
 

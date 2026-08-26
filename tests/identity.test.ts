@@ -13,7 +13,7 @@ describe("Core Organizations & Identity Management", () => {
 
   it("bootstraps the initial global owner and primary organization", () => {
     const { user, organization, membership } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Brandon York",
       organizationName: "Front Range Manufacturing",
       organizationSlug: "front-range-mfg",
@@ -37,7 +37,7 @@ describe("Core Organizations & Identity Management", () => {
 
   it("handles team invitation lifecycle and token acceptance", async () => {
     const { user: owner, organization: org } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Brandon York",
       organizationName: "Front Range Manufacturing",
       organizationSlug: "front-range-mfg",
@@ -73,7 +73,7 @@ describe("Core Organizations & Identity Management", () => {
 
   it("enforces tenant boundary isolation and rejects cross-tenant operations", () => {
     const { user: owner1, organization: org1 } = identityService.bootstrapOwner({
-      email: "owner1@4twenty.dev",
+      email: "owner1@yorkstead.com",
       name: "Owner One",
       organizationName: "Org Alpha",
       organizationSlug: "org-alpha",
@@ -101,7 +101,7 @@ describe("Core Organizations & Identity Management", () => {
 
   it("rejects authentication for disabled accounts", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Org Alpha",
       organizationSlug: "org-alpha",

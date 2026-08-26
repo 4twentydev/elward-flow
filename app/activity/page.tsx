@@ -1,7 +1,7 @@
 import { ActivityFeed } from "@/components/activity/activity-feed";
 
 export const metadata = {
-  title: "Activity & Audit Logs | 4TWENTY Operations",
+  title: "Activity & Audit Logs | Yorkstead Operations",
   description: "Tenant-scoped immutable operational activity history.",
 };
 

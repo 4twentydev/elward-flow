@@ -1,7 +1,7 @@
 import { OrganizationWorkspace } from "@/components/identity/organization-workspace";
 
 export const metadata = {
-  title: "Organization & Memberships | 4TWENTY Operations",
+  title: "Organization & Memberships | Yorkstead Operations",
   description: "Manage tenant organizations, memberships, roles, and invitation security.",
 };
 

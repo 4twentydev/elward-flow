@@ -1,7 +1,7 @@
 import { PacketWorkspace } from "@/components/packet-intelligence/packet-workspace";
 
 export const metadata = {
-  title: "Job Packet Intelligence | 4TWENTY Operations",
+  title: "Job Packet Intelligence | Yorkstead Operations",
   description: "Secure job document ingestion, revision inconsistency detection, and department packet assembly.",
 };
 

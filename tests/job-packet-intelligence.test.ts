@@ -13,7 +13,7 @@ describe("Job Packet Intelligence Module (Checkpoint 3)", () => {
 
   it("ingests engineering documents and extracts structured metadata", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -47,7 +47,7 @@ describe("Job Packet Intelligence Module (Checkpoint 3)", () => {
 
   it("flags revision and quantity mismatches without silently altering job truth", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -87,7 +87,7 @@ describe("Job Packet Intelligence Module (Checkpoint 3)", () => {
 
   it("assembles tailored department packets for shopfloor, qa, and purchasing", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

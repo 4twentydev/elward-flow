@@ -1,6 +1,6 @@
-# RivetWorks Operations
+# Yorkstead Operations
 
-The unified industrial operations platform built by RivetWorks for custom manufacturing, fabrication, and field service workflows.
+The unified industrial operations platform built by Yorkstead for custom manufacturing, fabrication, and field service workflows.
 
 ## Core Capabilities Implemented (Prompts 00 - 26)
 

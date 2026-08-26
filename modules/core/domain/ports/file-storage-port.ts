@@ -63,7 +63,7 @@ export class SyntheticFileStorageAdapter implements FileStoragePort {
     const expiresAt = new Date(Date.now() + 15 * 60 * 1000).toISOString(); // 15 mins
 
     return {
-      uploadUrl: `https://storage.synthetic.ops.4twenty.dev/upload?key=${encodeURIComponent(storageKey)}&expires=${encodeURIComponent(expiresAt)}`,
+      uploadUrl: `https://storage.synthetic.ops.yorkstead.com/upload?key=${encodeURIComponent(storageKey)}&expires=${encodeURIComponent(expiresAt)}`,
       storageKey,
       expiresAt,
     };
@@ -76,7 +76,7 @@ export class SyntheticFileStorageAdapter implements FileStoragePort {
   ): Promise<{ downloadUrl: string; expiresAt: string }> {
     const expiresAt = new Date(Date.now() + expiresInSeconds * 1000).toISOString();
     return {
-      downloadUrl: `https://storage.synthetic.ops.4twenty.dev/download?key=${encodeURIComponent(storageKey)}&filename=${encodeURIComponent(filename)}&sig=${Date.now()}`,
+      downloadUrl: `https://storage.synthetic.ops.yorkstead.com/download?key=${encodeURIComponent(storageKey)}&filename=${encodeURIComponent(filename)}&sig=${Date.now()}`,
       expiresAt,
     };
   }

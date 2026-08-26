@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
-  NEXT_PUBLIC_APP_NAME: z.string().default("4TWENTY Operations"),
+  NEXT_PUBLIC_APP_NAME: z.string().default("Yorkstead Operations"),
   NEXT_PUBLIC_APP_URL: z.string().url().default("http://localhost:3000"),
   DATABASE_URL: z.string().optional().default("postgresql://postgres:postgres@localhost:5432/elward_flow_dev"),
   BETTER_AUTH_SECRET: z.string().optional().default("synthetic_local_dev_secret_32_characters_long_min"),

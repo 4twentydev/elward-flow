@@ -13,7 +13,7 @@ describe("Inventory & Material Ledger Module", () => {
 
   it("calculates stock balances exclusively from immutable ledger transactions", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -61,7 +61,7 @@ describe("Inventory & Material Ledger Module", () => {
 
   it("enforces Negative Stock Policy and rejects overdraft issues", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -98,7 +98,7 @@ describe("Inventory & Material Ledger Module", () => {
 
   it("handles cycle count adjustment and idempotency keys", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

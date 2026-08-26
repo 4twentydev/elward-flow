@@ -9,7 +9,7 @@ Review date: TBD
 
 - [ ] Client work with written publication approval
 - [ ] Commercial product
-- [ ] 4TWENTY Labs experiment
+- [ ] Yorkstead Labs experiment
 - [ ] Interactive demo using synthetic data
 
 ## Evidence checklist

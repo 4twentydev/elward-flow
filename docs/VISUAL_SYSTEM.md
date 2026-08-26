@@ -1,8 +1,8 @@
-# RivetWorks Visual System
+# Yorkstead Visual System
 
 ## 1. Preservation Rule
 
-Before any UI, layout, navigation, component, page, demo, or design-system change, inspect the existing 4TWENTY.DEV application and treat its current visual identity as authoritative. Do not redesign the overall theme.
+Before any UI, layout, navigation, component, page, demo, or design-system change, inspect the existing Yorkstead.DEV application and treat its current visual identity as authoritative. Do not redesign the overall theme.
 
 Preserve color behavior, typography, spacing philosophy, borders, radii, shadows, navigation, buttons, cards, forms, tables, icons, widths, motion, logo treatment, and overall personality. New work must look as though it has always belonged to the same company.
 
@@ -10,11 +10,12 @@ Preserve color behavior, typography, spacing philosophy, borders, radii, shadows
 
 ## 2. Provenance and Inspection Record
 
-- **Source Reference**: Read-only inspection of `4twentydev` and `project-command-center` design systems on 2026-08-24.
+- **Source Reference**: Authoritative baseline established on 2026-08-24.
 - **Brand Authority**:
-  - Name: `4TWENTY.DEV`
-  - Wordmark: `4TWENTY`
-  - Domain Suffix: `.DEV` (rendered in primary cyan)
+  - Name: `Yorkstead Systems`
+  - Platform: `Yorkstead Operations`
+  - Wordmark: `YORKSTEAD`
+  - Domain Suffix: ` SYSTEMS` (rendered in primary cyan)
   - Descriptor: `Industrial software and workflow automation`
   - Personality: Purpose-built, dense, high-contrast, confident, operator-first.
 
@@ -65,7 +66,7 @@ Preserve color behavior, typography, spacing philosophy, borders, radii, shadows
 ## 4. Component Pattern Inventory
 
 1. **Brand Identity**:
-   - `BrandMark`: Inline wordmark `4TWENTY` with `.DEV` cyan suffix, paired with optional uppercase mono descriptor separated by vertical border.
+   - `BrandMark`: Inline wordmark `Yorkstead` with `.DEV` cyan suffix, paired with optional uppercase mono descriptor separated by vertical border.
 2. **Buttons**:
    - `default`: Primary cyan background with dark contrast text and subtle cyan glow.
    - `secondary`: Neutral dark slate surface with 1px border.

@@ -38,7 +38,7 @@ export class PackagingService {
       grossWeightLbs: 45.0,
       maxCapacityLbs: 70.0,
       dimensionsInches: { length: 18, width: 14, height: 10 },
-      labelBarcode: "4twenty://package/PKG-2026-081",
+      labelBarcode: "yorkstead://package/PKG-2026-081",
       status: "sealed_ready_for_shipping",
       sealedAt: new Date().toISOString(),
       sealedByUserId: "usr_pack",
@@ -91,7 +91,7 @@ export class PackagingService {
       grossWeightLbs: tareWeight,
       maxCapacityLbs: maxCapacity,
       dimensionsInches: dimensions,
-      labelBarcode: `4twenty://package/${packageNumber}`,
+      labelBarcode: `yorkstead://package/${packageNumber}`,
       status: "in_pack",
       createdAt: now,
     };

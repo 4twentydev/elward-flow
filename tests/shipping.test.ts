@@ -13,7 +13,7 @@ describe("Shipping & Load Builder Module", () => {
 
   it("creates a shipping manifest, validates sealed packages, and calculates gross weight", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -48,7 +48,7 @@ describe("Shipping & Load Builder Module", () => {
 
   it("dispatches shipment and confirms delivery with proof of delivery (POD)", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -89,7 +89,7 @@ describe("Shipping & Load Builder Module", () => {
 
   it("calculates logistics metrics and on-time performance", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

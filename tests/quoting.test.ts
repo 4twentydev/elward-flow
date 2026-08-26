@@ -13,7 +13,7 @@ describe("QuoteFlow & Estimating Module", () => {
 
   it("calculates cost breakdown, unit prices, and overall margins in integer cents", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -51,7 +51,7 @@ describe("QuoteFlow & Estimating Module", () => {
 
   it("enforces margin threshold policy and flags low-margin quotes for executive review", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -88,7 +88,7 @@ describe("QuoteFlow & Estimating Module", () => {
 
   it("converts accepted quote to live job idempotently", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

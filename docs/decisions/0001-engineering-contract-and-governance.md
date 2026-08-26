@@ -10,12 +10,12 @@
 
 ## Context and Problem Statement
 
-4TWENTY Operations requires a disciplined engineering contract and governance model to coordinate single-prompt autonomous implementation runs, multi-tenant security guarantees, domain boundaries, and visual fidelity with 4TWENTY.DEV.
+Yorkstead Operations requires a disciplined engineering contract and governance model to coordinate single-prompt autonomous implementation runs, multi-tenant security guarantees, domain boundaries, and visual fidelity with Yorkstead.DEV.
 
 Without an explicit decision workflow and binding contract:
 1. Contributors could introduce out-of-scope abstractions, premature dependencies, or speculative implementations.
 2. Architectural tensions (e.g., cross-module coupling, unauthorized route handlers, unisolated demo side effects) could bypass review.
-3. Visual identity could drift away from the authoritative 4TWENTY.DEV standard.
+3. Visual identity could drift away from the authoritative Yorkstead.DEV standard.
 4. Completion reporting would lack standardized verification evidence.
 
 ## Decision
@@ -24,7 +24,7 @@ Without an explicit decision workflow and binding contract:
 2. **Modular Monolith Architecture**: Maintain a single deployable application with strict module boundaries (`modules/<name>/domain`, `application`, `infrastructure`, `presentation`). Cross-module mutations require explicit application services; direct cross-module database access is prohibited.
 3. **Tenant Isolation & Security**: Every tenant-owned record must include an `organization_id` enforced server-side. Deny by default. UI visibility is presentation only, never security.
 4. **Demo Environment Safety**: Demo organizations are untrusted, deterministic, synthetic, and strictly isolated from production side effects (email, SMS, payments, carriers intercepted/simulated).
-5. **Visual System Preservation**: Subordinate to `docs/VISUAL_SYSTEM.md`. The 4TWENTY appearance is authoritative; extend without redesigning or introducing foreign styles.
+5. **Visual System Preservation**: Subordinate to `docs/VISUAL_SYSTEM.md`. The Yorkstead appearance is authoritative; extend without redesigning or introducing foreign styles.
 6. **Decision Log & Stop Conditions**: Stop immediately and write an ADR when an instruction creates architectural conflicts, tenant boundary issues, destructive migrations, or irreversible actions.
 7. **Single Vertical Slice Discipline**: Execute exactly one numbered prompt per session. No speculative code or dependencies. Verify the full user path and provide a standardized verification report.
 
@@ -37,7 +37,7 @@ Without an explicit decision workflow and binding contract:
 
 ### Positive
 - Strict isolation, predictable reviewable changes, and zero speculative bloat.
-- Consistent user experience and visual harmony across 4TWENTY products.
+- Consistent user experience and visual harmony across Yorkstead products.
 - Standardized verification gates prevent unverified regressions from advancing past phase checkpoints.
 
 ### Negative / Operational Burden
@@ -48,7 +48,7 @@ Without an explicit decision workflow and binding contract:
 - **Modular Monolith & Module Boundaries**: Enforced at directory and API levels.
 - **Tenant Isolation & Server-Side Authorization**: Mandatory `organization_id` filters and server-side capability checks.
 - **Demo Mode Isolation & Safety**: Dedicated synthetic scenarios with mocked side effects.
-- **Visual System Compliance**: Strictly preserves existing 4TWENTY.DEV design tokens and aesthetics.
+- **Visual System Compliance**: Strictly preserves existing Yorkstead.DEV design tokens and aesthetics.
 
 ## Migration & Rollback Plan
 

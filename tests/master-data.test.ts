@@ -13,7 +13,7 @@ describe("Customers, Vendors, and Locations Master Data", () => {
 
   it("creates, retrieves, and archives customer records within tenant boundaries", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -55,7 +55,7 @@ describe("Customers, Vendors, and Locations Master Data", () => {
 
   it("creates approved vendors and locations", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

@@ -15,7 +15,7 @@ describe("Authorization & Capability Policies", () => {
 
   it("grants full capabilities to organization owner", () => {
     const { user } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Test Factory",
       organizationSlug: "test-factory",
@@ -33,7 +33,7 @@ describe("Authorization & Capability Policies", () => {
 
   it("restricts operator role to station execution and denies administrative capabilities", async () => {
     const { user: owner, organization: org } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Test Factory",
       organizationSlug: "test-factory",
@@ -65,7 +65,7 @@ describe("Authorization & Capability Policies", () => {
 
   it("enforces tenant boundary inside capability checks", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -80,7 +80,7 @@ describe("Authorization & Capability Policies", () => {
 
   it("supports dynamic capability overrides with actor permission check", () => {
     const { user: owner, organization: org } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

@@ -1,7 +1,7 @@
 import { QualityWorkspace } from "@/components/quality/quality-workspace";
 
 export const metadata = {
-  title: "Quality Assurance & NCR | 4TWENTY Operations",
+  title: "Quality Assurance & NCR | Yorkstead Operations",
   description: "Inspection plans, pass/fail capture, non-conformance reports, and yield analytics.",
 };
 

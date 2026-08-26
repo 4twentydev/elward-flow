@@ -6,6 +6,16 @@ These instructions apply to Gemini and every human or automated contributor.
 
 Before work, read this file, the requested prompt, `docs/VISUAL_SYSTEM.md`, `docs/ARCHITECTURE.md`, and relevant module documentation. Existing repository decisions and accepted ADRs are authoritative. A prompt may narrow this contract but may not silently override it.
 
+## Naming and brand authority
+
+- **Company Name**: `Yorkstead Systems`
+- **Short Brand Name**: `Yorkstead`
+- **Commercial Platform**: `Yorkstead Operations`
+- **Public Company Website**: `https://yorkstead.com` (`yorkstead-website`, Netlify: `yorkstead`)
+- **Operations Application**: `https://ops.yorkstead.com` (`yorkstead-operations`, Netlify: `yorkstead-operations`)
+- **Package Namespace**: `@yorkstead`
+- **Retired Brand Names**: `4TWENTY`, `4twentydev`, `4twentyops`, `Groundline`, `RivetWorks`, and `rivetworks.software` are retired from customer-facing branding and should only appear in historical records or migration decision notes.
+
 ## Working method
 
 1. Inspect repository status, current implementation, tests, and relevant documentation before editing.
@@ -36,7 +46,7 @@ Stop feature work and write an ADR when a request conflicts with architecture, t
 
 ## Visual rule
 
-All visual work is subordinate to `docs/VISUAL_SYSTEM.md`. The existing `rivetworks/website` appearance is authoritative during the brand and hosting migration. Extend it; do not reinterpret, modernize, or overwrite it. Report whether any global visual identity changed. The expected answer is: “No existing global visual identity was changed.”
+All visual work is subordinate to `docs/VISUAL_SYSTEM.md`. The existing `yorkstead-website` appearance is authoritative during the brand and hosting migration. Extend it; do not reinterpret, modernize, or overwrite it. Report whether any global visual identity changed. The expected answer is: “No existing global visual identity was changed.”
 
 ## Data and security
 

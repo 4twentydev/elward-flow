@@ -13,7 +13,7 @@ describe("Jobs & Workflow Core Domain", () => {
 
   it("creates a job and advances workflow through guarded valid transitions", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -48,7 +48,7 @@ describe("Jobs & Workflow Core Domain", () => {
 
   it("rejects invalid state transitions and optimistic concurrency conflicts", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -76,7 +76,7 @@ describe("Jobs & Workflow Core Domain", () => {
 
   it("creates engineering revisions with explicit change summary", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

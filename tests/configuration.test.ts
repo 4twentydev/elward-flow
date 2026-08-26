@@ -13,7 +13,7 @@ describe("Organization Configuration & Administration", () => {
 
   it("retrieves default configuration and tracks versioned updates", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -55,7 +55,7 @@ describe("Organization Configuration & Administration", () => {
 
   it("enforces server-side disabled module checks and rejects access", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -88,7 +88,7 @@ describe("Organization Configuration & Administration", () => {
 
   it("validates invariants and supports rollback", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

@@ -13,7 +13,7 @@ describe("ShopFloor & Digital Traveler Module", () => {
 
   it("creates a digital traveler and executes ordered operations", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -58,7 +58,7 @@ describe("ShopFloor & Digital Traveler Module", () => {
 
   it("handles blocker reporting and QR-tag resolution", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -86,7 +86,7 @@ describe("ShopFloor & Digital Traveler Module", () => {
     expect(blocked.status).toBe("on_hold");
 
     // QR Lookup
-    const lookedUp = shopfloorService.getTravelerByQr(session, "4twenty://traveler/TRV-2026-105");
+    const lookedUp = shopfloorService.getTravelerByQr(session, "yorkstead://traveler/TRV-2026-105");
     expect(lookedUp.id).toBe(traveler.id);
   });
 });

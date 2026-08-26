@@ -13,7 +13,7 @@ describe("Packaging & Palletization Module", () => {
 
   it("creates a container, packs items, and verifies gross weight math", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -47,7 +47,7 @@ describe("Packaging & Palletization Module", () => {
 
   it("enforces container weight capacity constraint guardrail", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",
@@ -75,7 +75,7 @@ describe("Packaging & Palletization Module", () => {
 
   it("seals container, updates status to ready for shipping, and derives metrics", () => {
     const { user: owner } = identityService.bootstrapOwner({
-      email: "owner@4twenty.dev",
+      email: "owner@yorkstead.com",
       name: "Owner",
       organizationName: "Factory A",
       organizationSlug: "factory-a",

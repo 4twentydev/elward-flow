@@ -1,7 +1,7 @@
 import { PackagingWorkspace } from "@/components/packaging/packaging-workspace";
 
 export const metadata = {
-  title: "Packaging & Palletization | 4TWENTY Operations",
+  title: "Packaging & Palletization | Yorkstead Operations",
   description: "Packaging specifications, container packing, gross weight capacity, and shipping readiness.",
 };
 

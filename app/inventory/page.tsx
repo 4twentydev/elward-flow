@@ -1,7 +1,7 @@
 import { InventoryWorkspace } from "@/components/inventory/inventory-workspace";
 
 export const metadata = {
-  title: "Inventory & Material Ledger | 4TWENTY Operations",
+  title: "Inventory & Material Ledger | Yorkstead Operations",
   description: "Immutable transaction ledger, negative stock policy, receiving, and lot traceability.",
 };
 

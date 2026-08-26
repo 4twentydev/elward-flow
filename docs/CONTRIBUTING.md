@@ -1,4 +1,4 @@
-# Contributing to 4TWENTY Operations
+# Contributing to Yorkstead Operations
 
 This document establishes the contribution workflow, Definition of Done, verification reporting standards, and checkpoint governance for human and automated contributors.
 
@@ -64,7 +64,7 @@ A prompt or feature is complete ONLY when all the following criteria are satisfi
 - [ ] **Synthetic Data Only**: Fixtures and seeds use synthetic data; no live credentials, customer PII, or production dumps exist.
 - [ ] **Real User Path Exercised**: The end-to-end user workflow was executed and verified, including loading, empty, error, and narrow-screen states.
 - [ ] **Automated Checks Pass**: Typecheck, lint, formatting, unit/integration tests, and build execute cleanly without unhandled errors (when toolchain is established).
-- [ ] **Visual Preservation Verified**: Rendered pages match 4TWENTY.DEV conventions without unauthorized theme, font, or color redesigns.
+- [ ] **Visual Preservation Verified**: Rendered pages match Yorkstead.DEV conventions without unauthorized theme, font, or color redesigns.
 - [ ] **Documentation Updated**: All relevant markdown files, architecture references, and ADR indices reflect the change.
 - [ ] **Standardized Report Generated**: Verification report contains exact commands, evidence, risks, visual status, and next prompt.
 
