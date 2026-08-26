@@ -60,6 +60,9 @@ export function Header() {
           <Link href="/quotes" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Quotes
           </Link>
+          <Link href="/purchasing" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
+            Purchasing
+          </Link>
           <Link href="/files" className="text-xs font-mono uppercase tracking-wider text-muted-foreground transition hover:text-foreground">
             Files
           </Link>
