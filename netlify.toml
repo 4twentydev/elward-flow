@@ -1,0 +1,22 @@
+# Netlify Configuration for Yorkstead Operations (ops.yorkstead.com)
+[build]
+  command = "bun run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "20"
+  BUN_VERSION = "1.3.14"
+  NEXT_PUBLIC_APP_NAME = "Yorkstead Operations"
+  NEXT_PUBLIC_APP_URL = "https://ops.yorkstead.com"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(self), microphone=(), geolocation=()"
