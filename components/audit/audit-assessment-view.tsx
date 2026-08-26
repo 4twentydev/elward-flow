@@ -7,7 +7,8 @@ import { AuditAnswerInput, FactType } from "@/modules/audit/domain/types";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Printer } from "lucide-react";
+import { Printer, FileText, CheckCircle2 } from "lucide-react";
+import { AuditClientBriefingView } from "@/components/audit/audit-client-briefing-view";
 
 export function AuditAssessmentView() {
   const [clientName, setClientName] = React.useState("Front Range Manufacturing");
@@ -56,6 +57,8 @@ export function AuditAssessmentView() {
     },
   });
 
+  const [activeView, setActiveView] = React.useState<"diagnostic" | "deliverable">("diagnostic");
+
   const report = React.useMemo(() => {
     return calculateAuditReport("audit_demo_1", clientName, industry, new Date().toISOString().split("T")[0], answers);
   }, [clientName, industry, answers]);
@@ -73,30 +76,58 @@ export function AuditAssessmentView() {
 
   return (
     <div className="space-y-8">
-      {/* Header Info */}
-      <div className="flex flex-col justify-between gap-4 border-b border-border pb-6 sm:flex-row sm:items-center">
-        <div>
-          <div className="flex items-center gap-2">
-            <Badge variant="default">WORKFLOW//AUDIT</Badge>
-            <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              Internal Diagnostic Deliverable
-            </span>
-          </div>
-          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            Operational Friction Diagnostic
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            Objective evaluation of shopfloor and workflow bottlenecks before prescribing software.
-          </p>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <Button variant="outline" size="sm" onClick={() => window.print()}>
-            <Printer className="mr-2 size-4" />
-            Print Briefing
-          </Button>
-        </div>
+      {/* View Switcher Tabs */}
+      <div className="flex flex-wrap gap-2 border-b border-border pb-4 font-mono text-xs print:hidden">
+        <button
+          onClick={() => setActiveView("diagnostic")}
+          className={`rounded-lg px-3.5 py-1.5 transition ${
+            activeView === "diagnostic"
+              ? "bg-primary text-primary-foreground font-semibold shadow-sm"
+              : "bg-card border border-border text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          Internal Diagnostic Assessment
+        </button>
+        <button
+          onClick={() => setActiveView("deliverable")}
+          className={`rounded-lg px-3.5 py-1.5 transition ${
+            activeView === "deliverable"
+              ? "bg-primary text-primary-foreground font-semibold shadow-sm"
+              : "bg-card border border-border text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          Evidence-Backed Client Briefing Deliverable
+        </button>
       </div>
+
+      {activeView === "deliverable" ? (
+        <AuditClientBriefingView />
+      ) : (
+        <>
+          {/* Header Info */}
+          <div className="flex flex-col justify-between gap-4 border-b border-border pb-6 sm:flex-row sm:items-center">
+            <div>
+              <div className="flex items-center gap-2">
+                <Badge variant="default">WORKFLOW//AUDIT</Badge>
+                <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                  Internal Diagnostic Deliverable
+                </span>
+              </div>
+              <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                Operational Friction Diagnostic
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                Objective evaluation of shopfloor and workflow bottlenecks before prescribing software.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Button variant="outline" size="sm" onClick={() => window.print()}>
+                <Printer className="mr-2 size-4" />
+                Print Assessment
+              </Button>
+            </div>
+          </div>
 
       {/* Engagement Parameters */}
       <div className="grid gap-4 rounded-xl border border-border bg-card p-4 sm:grid-cols-3">
@@ -358,6 +389,8 @@ export function AuditAssessmentView() {
           In accordance with <code>docs/METRICS.md</code>, all reported hours are segregated into verified measured facts versus operator estimates. Benefit realizations and projected returns remain illustrative until baselined during actual pilot execution.
         </p>
       </div>
+        </>
+      )}
     </div>
   );
 }
