@@ -4,7 +4,7 @@ import * as React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, CheckCircle2, AlertTriangle, Plus, ArrowRight, DollarSign, Clock, ShieldCheck } from "lucide-react";
+import { ShoppingCart, CheckCircle2, AlertTriangle, Plus, DollarSign, ShieldCheck } from "lucide-react";
 
 export function PurchasingWorkspace() {
   const [feedback, setFeedback] = React.useState<string | null>(null);

@@ -325,7 +325,7 @@ export class PurchasingService {
   }
 
   // 5. Shortages & Supplier Options
-  getSupplierOptions(itemCode: string): SupplierOption[] {
+  getSupplierOptions(_itemCode: string): SupplierOption[] {
     return [
       {
         vendorId: "vend_1",
